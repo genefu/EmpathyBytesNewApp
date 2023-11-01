@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native"
+import { View, Text, StyleSheet, TouchableOpacity, Image, Pressable } from "react-native"
+import { Button } from 'react-native-paper'
 
 function WelcomeScreen({navigation}) {
 
@@ -22,6 +23,17 @@ function WelcomeScreen({navigation}) {
                     uri: 'https://i.stack.imgur.com/4G1qY.png'}}
                 />
             </TouchableOpacity>
+            <TouchableOpacity style={styles.nbutton} onPress={() => navigation.navigate('Home')}>
+                <Text>Press Here</Text>
+            </TouchableOpacity>
+            <Button icon="camera" mode="bo" onPress={() => console.log('Pressed')}>
+                Press me
+            </Button>
+            <Button style={styles.sbutton}icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+                Press me
+            </Button>
+    
+            
         </View>
     );
 }
@@ -51,6 +63,32 @@ const styles = StyleSheet.create({
         width: 100,
         height: 80,
     },
+    dbutton: {
+        alignItems: 'center',
+        backgroundColor: '#823451',
+        padding: 10,
+        elevation: 10,
+        borderRadius: 4,
+    },
+    nbutton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 10,
+        backgroundColor: 'pink',
+        shadowColor: 'grey',
+        shadowOpacity: 2,
+        shadowRadius: 1 ,
+        shadowOffset : { width: 0.2, height: 0.2},
+        margin: 10
+      },
+      sbutton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 10
+      },
 })
 
 export default WelcomeScreen;

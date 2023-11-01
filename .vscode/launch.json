@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/feliciaj/CS2200/cs2200-project3/src/student-src",
+      "program": "/Users/feliciaj/CS2200/cs2200-project3/src/student-src/build/Debug/outDebug"
+    }
+  ]
+}
